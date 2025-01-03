@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+    <link href="https://fonts.cdnfonts.com/css/cursed-timer-ulil" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/tilt-warp" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/maximum-impact" rel="stylesheet">            
+    <link rel="stylesheet" href="styles.css">
+    <title>Basketball Scoreboard</title>
+</head>
+<body>
+    <div class="header-container">
+        
+        <div id="game-over-popup" class="popup">
+            <h2>The timer has reached zero!</h2>
+            <h2>The end of the period.</h2>
+            <br>
+            <h2>Final Score:</h2>
+            <p id="final-score"></p>
+            <div>
+                <button onclick="closePopup()">Close</button>
+            </div>
+        </div>
+    
+        <div id="popup-welcome" class="popup-welcome">
+            <h3>Welcome to Basketball Scoreboard</h3>
+            <p>JavaScript practice of Scrimbacourse</p>
+            <p>© NNmaki 2025</p>
+            <p>Choose period length, press Start and save earned points of team by pressing +1 +2 or +3 buttons</p>
+            <div>
+                <button onclick="closePopupWelcome()">Close</button>
+            </div>
+            <p id="edit">Edit: Added 15 seconds period length button for testing purposes</p>
+        </div>
+    </div>
+<div class="main-container">   
+    <div>
+        <h1>CRISPY BITES ARENA, HELSINKI</h1>
+    </div>
+    <div class="main-container-inner">
+        <div class="home-column">
+            <h3>HOME</h3>
+            <p id="home-score">0</p>
+            <h4>Add score:</h4>
+            <button class="btn-add-points" onclick="addHomeOne()">+1</button>
+            <button class="btn-add-points" onclick="addHomeTwo()">+2</button>
+            <button class="btn-add-points" onclick="addHomeThree()">+3</button>
+        </div>
+        <div class="center-column">
+            <div>
+                <img id="crispylogo" src="assets/crispybites.png">
+            </div>
+            <h2>Time</h2>
+            <p id="timer-value"><span id="minutes">00</span>:<span id="seconds">00</span>:<span id="milliseconds">00</span></p>
+            <h4>Set period length in minutes:</h4>
+            <div>
+                <button class="btn-set-period" onclick="setPeriod1()">15sec</button>
+                <button class="btn-set-period" onclick="setPeriod10()">10</button>
+                <button class="btn-set-period" onclick="setPeriod12()">12</button>
+            </div>
+            <h4>Game controls:</h4>
+            <div>
+                <button class="btn-start-stop" onclick="startGame()">START</button>
+                <button class="btn-start-stop" onclick="stopGame()">STOP</button>
+            </div>
+            <div>
+                <button class="btn-newgame" onclick="newGame()">NEW GAME</button>
+            </div>
+        </div>
+        <div class="guest-column">
+            <h3>GUEST</h3>
+            <p id="guest-score">0</p>
+            <h4>Add score:</h4>
+            <button class="btn-add-points" onclick="addGuestOne()">+1</button>
+            <button class="btn-add-points" onclick="addGuestTwo()">+2</button>
+            <button class="btn-add-points" onclick="addGuestThree()">+3</button>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
